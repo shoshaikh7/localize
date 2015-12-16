@@ -31,6 +31,8 @@ gem 'pry', '~> 0.10.3'
 gem 'paperclip', '~> 4.3', '>= 4.3.2'
 # Friendly ID
 gem 'friendly_id', '~> 5.1'
+# Best in place
+gem 'best_in_place', '~> 3.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

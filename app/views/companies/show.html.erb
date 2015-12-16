@@ -1,15 +1,48 @@
-<h1><%= @company.company_name %></h1>
-<div class="company-image"><%= image_tag @company.image.url(:large) %></div>
-<div class="tagline"><%= @company.tagline %></div>
-<div class="email"><%= @company.email %></div>
-<div class="address1"><%= @company.address1 %></div>
-<div class="address2"><%= @company.address2 %></div>
-<div class="zipcode"><%= @company.zipcode %></div>
-<div class="phone"><%= @company.phone %></div>
-<div class="about"><%= @company.about %></div>
-<div class="hours"><%= @company.hours %></div>
-<div class="social">
-  <a href="<%= @company.facebook %>" id="facebook"><i class="fa fa-2x fa-facebook-square"></i></a>
-  <a href="<%= @company.twitter %>" id="twitter"><i class="fa fa-2x fa-twitter-square"></i></a>
-  <a href="<%= @company.google %>" id="google"><i class="fa fa-2x fa-google-plus-square"></i></a>
+<div class="container show-container">
+  <div class="row page-header show-header">
+    <div class="company-image col-md-3"><%= image_tag @company.image.url(:large) %></div>
+    <div class="company-name col-md-8"><h1><%= @company.company_name %></h1></div>
+    <div class="company-tagline col-md-6"><%= @company.tagline %></div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading"><p>Address</p></div>
+        <div class="panel-body text-center">
+          <p><%= @company.address1 %></p>
+          <p><%= @company.address2 %></p>
+          <p><%= @company.zipcode %></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading"><p>Hours</p></div>
+        <div class="panel-body text-center">
+          <p><%= @company.hours %></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading"><p>Contact</p></div>
+        <div class="panel-body">
+          <div class="row">
+            <h4 class="col-md-4">Email:</h4><p class="col-md-4"><%= @company.email %></p>
+          </div>
+          <div class="row">
+            <h4 class="col-md-4">Phone:</h4><p class="col-md-4"><%= @company.phone %></p>
+          </div>
+          <hr>
+          <a href="<%= @company.facebook %>" id="facebook" class="col-md-3 col-md-offset-2"><i class="fa fa-3x fa-facebook-square"></i></a>
+          <a href="<%= @company.twitter %>" id="twitter" class="col-md-3"><i class="fa fa-3x fa-twitter-square"></i></a>
+          <a href="<%= @company.google %>" id="google" class="col-md-3"><i class="fa fa-3x fa-google-plus-square"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading"><p>About Us</p></div>
+    <div class="panel-body company-about"><p><%= @company.about %></p></div>
+  </div>
 </div>

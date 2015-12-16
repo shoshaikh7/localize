@@ -2,6 +2,7 @@ class CompaniesController < ApplicationController
   before_action :authenticate_user!, only: [:index]
   before_action :set_company, only: [:destroy, :show, :update, :edit]
   before_action :check_company_presence, only: [:new, :create]
+  respond_to :html, :json
 
   def index
     @companies = Company.all
@@ -15,8 +16,8 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    @company = Company.new(company_params)
-    @company.user = User.find(current_user.id)
+    @company = Company.new company_params
+    @company.user = User.find current_user.id
     @company.save
     redirect_to @company
   end
@@ -25,19 +26,15 @@ class CompaniesController < ApplicationController
   end
 
   def update
-    if @company.update(company_params)
-      flash.notice = "#{@company.company_name} Updated!"
-      redirect_to @company
-    else
-      redirect_to edit_company_path
-    end
+    @company.update company_params
+    respond_with @company
   end
 
 
   private
 
   def set_company
-    @company = Company.friendly.find(params[:id])
+    @company = Company.friendly.find params[:id]
   end
 
   def company_params

@@ -18,6 +18,10 @@ body {
   font-family: 'Karla', sans-serif;
 }
 
+.show-container {
+  margin-top: 3em;
+}
+
 .main-header {
   background-image: image-url('city.jpeg');
   background-size: cover;
@@ -33,4 +37,83 @@ body {
   // background-color: rgb(66, 66, 66);
   border-radius: 0px;
   margin-bottom: 0;
+}
+
+.show-header {
+  margin-bottom: 3em;
+  padding-bottom: 3em;
+}
+
+.show-header {
+  margin-top: 3em
+}
+
+.company-image img{
+  border-radius: 7px;
+}
+
+.company-name h1{
+  font-size: 5em;
+  margin-top: 0;
+  margin-left: 0.8em;
+}
+
+.company-tagline {
+  font-size: 2.5em;
+  margin-left: 1.7em;
+}
+
+.email h4{
+  font-size: 2em;
+  display: inline-block;
+}
+
+.email p {
+  font-size: 1.4em;
+  margin-left: 0.5em;
+  display: inline-block;
+}
+
+.company-address {
+  display: inline-block;
+}
+
+.company-hour {
+  display: inline-block;
+}
+
+.panel-heading {
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  text-align: center;
+}
+
+.panel-heading p{
+  font-size: 1.8em;
+  margin: 0;
+}
+
+.panel-body {
+  height: 13em;
+}
+
+.panel-body p {
+  font-size: 1.3em;
+  margin-top: 8px;
+  // display: inline-block;
+}
+
+.panel-body h4 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: 0.4em;
+}
+
+.panel-body hr {
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.company-about p{
+  font-size: 1.2em
 }

@@ -1,3 +1,73 @@
-<h1>Edit your company's information here</h1>
+<h3>Edit your company's information by clicking on whatever you want to edit!</h3>
 
-<%= render "form" %>
+<div class="container show-container">
+  <div class="row page-header show-header">
+    <div class="company-image col-md-3"><%= image_tag @company.image.url(:large) %>
+      <%= form_for @company, :html => { :multipart => true } do |f| %>
+      <div class="field">
+        <%= f.file_field :image %>
+      </div>
+      <% end %>
+    </div>
+    <div class="company-name col-md-8"><h1><%= best_in_place @company, :company_name %></h1></div>
+    <div class="company-tagline col-md-6"><%= best_in_place @company, :tagline %></div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading"><p>Address</p></div>
+        <div class="panel-body text-center">
+          <p><%= best_in_place @company, :address1 %></p>
+          <p><%= best_in_place @company, :address2 %></p>
+          <p><%= best_in_place @company, :zipcode %></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading"><p>Hours</p></div>
+        <div class="panel-body text-center">
+          <p><%= best_in_place @company, :hours %></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading"><p>Contact</p></div>
+        <div class="panel-body">
+          <div class="row">
+            <h4 class="col-md-4">Email:</h4><p class="col-md-4"><%= best_in_place @company, :email %></p>
+          </div>
+          <div class="row">
+            <h4 class="col-md-4">Phone:</h4><p class="col-md-4"><%= best_in_place @company, :phone %></p>
+          </div>
+          <hr>
+          <%= form_for @company, :html => { :multipart => true } do |f| %>
+            <div class="field">
+              <%= f.label :facebook %>
+              <%= f.url_field :facebook %>
+            </div>
+
+            <div class="field">
+              <%= f.label :twitter %>
+              <%= f.url_field :twitter %>
+            </div>
+
+            <div class="field">
+              <%= f.label :google, "Google+" %>
+              <%= f.url_field :google %>
+            </div>
+
+            <div class="field">
+              <%= f.submit %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading"><p>About Us</p></div>
+    <div class="panel-body company-about"><p><%= best_in_place @company, :about, as: :textarea %></p></div>
+  </div>
+</div>
