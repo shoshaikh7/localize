@@ -5,9 +5,12 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
+  <%= render "/devise/menu/nav" %>
+  <% if notice %> <p class="notice"><%= notice %></p> <% end %>
+  <% if alert %> <p class="alert"><%= alert %></p> <% end %>
 <%= yield %>
 
 </body>
