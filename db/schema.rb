@@ -29,13 +29,13 @@ ActiveRecord::Schema.define(version: 20151216023905) do
     t.string   "facebook"
     t.string   "twitter"
     t.string   "google"
-    t.string   "img_url_file_name"
-    t.string   "img_url_content_type"
-    t.integer  "img_url_file_size"
-    t.datetime "img_url_updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.integer  "user_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   add_index "companies", ["user_id"], name: "index_companies_on_user_id", using: :btree

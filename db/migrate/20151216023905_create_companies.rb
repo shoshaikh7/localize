@@ -13,7 +13,7 @@ class CreateCompanies < ActiveRecord::Migration
       t.string :facebook
       t.string :twitter
       t.string :google
-      t.attachment :img_url
+      t.attachment :image
       t.integer :user_id, index: true, foreign_key: true
 
       t.timestamps null: false
