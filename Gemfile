@@ -29,6 +29,8 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'pry', '~> 0.10.3'
 # Paperclip
 gem 'paperclip', '~> 4.3', '>= 4.3.2'
+# Friendly ID
+gem 'friendly_id', '~> 5.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

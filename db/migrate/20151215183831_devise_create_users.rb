@@ -32,7 +32,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       t.string :first_name
       t.string :last_name
-      t.integer :phone
       t.boolean :isadmin
 
       t.timestamps null: false
