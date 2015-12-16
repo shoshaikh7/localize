@@ -11,10 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151215183831) do
+ActiveRecord::Schema.define(version: 20151216023905) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "companies", force: :cascade do |t|
+    t.string   "company_name"
+    t.string   "tagline"
+    t.string   "email"
+    t.string   "address1"
+    t.string   "address2"
+    t.integer  "zipcode"
+    t.integer  "phone"
+    t.text     "about"
+    t.string   "hours"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "google"
+    t.string   "img_url_file_name"
+    t.string   "img_url_content_type"
+    t.integer  "img_url_file_size"
+    t.datetime "img_url_updated_at"
+    t.integer  "user_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "companies", ["user_id"], name: "index_companies_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
