@@ -1,3 +1,15 @@
 <h1><%= @company.company_name %></h1>
 <div class="company-image"><%= image_tag @company.image.url(:large) %></div>
-<p>Find me in app/views/companies/show.html.erb</p>
+<div class="tagline"><%= @company.tagline %></div>
+<div class="email"><%= @company.email %></div>
+<div class="address1"><%= @company.address1 %></div>
+<div class="address2"><%= @company.address2 %></div>
+<div class="zipcode"><%= @company.zipcode %></div>
+<div class="phone"><%= @company.phone %></div>
+<div class="about"><%= @company.about %></div>
+<div class="hours"><%= @company.hours %></div>
+<div class="social">
+  <a href="<%= @company.facebook %>" id="facebook"><i class="fa fa-2x fa-facebook-square"></i></a>
+  <a href="<%= @company.twitter %>" id="twitter"><i class="fa fa-2x fa-twitter-square"></i></a>
+  <a href="<%= @company.google %>" id="google"><i class="fa fa-2x fa-google-plus-square"></i></a>
+</div>
