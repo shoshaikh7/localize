@@ -1,12 +1,12 @@
 class CompaniesController < ApplicationController
-  before_action :authenticate_user!, only: [:index]
+  before_action :authenticate_user!, except: [:index]
   before_action :set_company, only: [:destroy, :show, :update, :edit]
   before_action :check_company_presence, only: [:new, :create]
   respond_to :html, :json
 
   def index
     @companies = Company.all
-    @company = current_user.company
+    # @company = current_user.company
   end
 
   def show

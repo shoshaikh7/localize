@@ -5,9 +5,9 @@
   </h1>
   <h3>Create a beautiful single page website for your small business with only a few clicks!</h3><br>
   <% if user_signed_in? %>
-    <%= button_tag "Check Out Other Businesses", :type => 'button', :class => "btn btn-lg btn-info", :onclick => "location.href = '#{companies_path}'" %>
+    <%= button_tag "Check Out Your Business", :type => 'button', :class => "btn btn-lg btn-info", :onclick => "location.href = '#{@company}'" %>
   <% else %>
-    <%= button_tag "Check Out Localize", :type => 'button', :class => "btn btn-lg btn-info", :onclick => "location.href = '#{}'" %>
+    <%= button_tag "Check Out Localize", :type => 'button', :class => "btn btn-lg btn-info", :onclick => "location.href = '#{companies_path}'" %>
   <% end %>!
 </div>
 <div class="container">
