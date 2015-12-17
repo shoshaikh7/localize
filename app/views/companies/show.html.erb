@@ -1,4 +1,7 @@
 <div class="container show-container">
+  <% if current_user.id == @company.user.id %>
+    <h3 class="well text-center">This is your business page! <%= link_to "You can edit it here.", edit_company_path(@company) %></h3>
+  <% end %>
   <div class="row page-header show-header">
     <div class="company-image col-md-3"><%= image_tag @company.image.url(:large) %></div>
     <div class="company-name col-md-8"><h1><%= @company.company_name %></h1></div>
@@ -6,18 +9,30 @@
   </div>
   <div class="row">
     <div class="col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-heading"><p>Address</p></div>
-        <div class="panel-body text-center">
-          <p><%= @company.address1 %></p>
-          <p><%= @company.address2 %></p>
-          <p><%= @company.zipcode %></p>
+      <div class="panel panel-default company-address">
+        <div class="panel-heading"><p class="panel-title">Address</p></div>
+        <div class="panel-body">
+          <div class="row">
+            <h4 class="col-md-3">Address:</h4><p class="col-md-8"><%= @company.street_address %></p>
+          </div>
+          <div class="row">
+            <h4 class="col-md-3"></h4><p class="col-md-8"><%= @company.street_address_2 %></p>
+          </div>
+          <div class="row">
+            <h4 class="col-md-3">City:</h4><p class="col-md-8"><%= @company.city %></p>
+          </div>
+          <div class="row">
+            <h4 class="col-md-3">State:</h4><p class="col-md-8"><%= @company.state %></p>
+          </div>
+          <div class="row">
+            <h4 class="col-md-3">Zipcode:</h4><p class="col-md-8"><%= @company.zipcode %></p>
+          </div>
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <div class="panel panel-default">
-        <div class="panel-heading"><p>Hours</p></div>
+        <div class="panel-heading"><p class="panel-title">Hours</p></div>
         <div class="panel-body text-center">
           <p><%= @company.hours %></p>
         </div>
@@ -25,7 +40,7 @@
     </div>
     <div class="col-md-4">
       <div class="panel panel-default">
-        <div class="panel-heading"><p>Contact</p></div>
+        <div class="panel-heading"><p class="panel-title">Contact</p></div>
         <div class="panel-body">
           <div class="row">
             <h4 class="col-md-4">Email:</h4><p class="col-md-4"><%= @company.email %></p>

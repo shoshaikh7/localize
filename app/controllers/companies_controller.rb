@@ -6,6 +6,7 @@ class CompaniesController < ApplicationController
 
   def index
     @companies = Company.all
+    @company = current_user.company
   end
 
   def show
@@ -34,11 +35,11 @@ class CompaniesController < ApplicationController
   private
 
   def set_company
-    @company = Company.friendly.find params[:id]
+    @company = Company.find(params[:id])
   end
 
   def company_params
-    params.require(:company).permit( :company_name, :tagline, :address1, :address2, :zipcode, :phone, :email, :about, :hours, :facebook, :twitter, :google, :image, :user_id, :slug)
+    params.require(:company).permit( :company_name, :tagline, :street_address, :street_address_2, :city, :state, :zipcode, :phone, :email, :about, :hours, :facebook, :twitter, :google, :image, :user_id)
   end
 
   def check_company_presence

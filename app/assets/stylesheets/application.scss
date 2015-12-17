@@ -48,6 +48,10 @@ body {
   margin-top: 3em
 }
 
+.company-image {
+  margin-right: 4em;
+}
+
 .company-image img{
   border-radius: 7px;
 }
@@ -55,12 +59,11 @@ body {
 .company-name h1{
   font-size: 5em;
   margin-top: 0;
-  margin-left: 0.8em;
+
 }
 
 .company-tagline {
   font-size: 2.5em;
-  margin-left: 1.7em;
 }
 
 .email h4{
@@ -74,8 +77,17 @@ body {
   display: inline-block;
 }
 
-.company-address {
-  display: inline-block;
+.company-address .panel-body p{
+  margin: 5px auto !important;
+  padding-left: 30px !important;
+}
+
+.company-address h4 {
+  margin: 5px auto !important;
+}
+
+.panel-body {
+  padding-top: 5px;
 }
 
 .company-hour {
@@ -98,14 +110,17 @@ body {
 }
 
 .panel-body p {
-  font-size: 1.3em;
+  font-size: 1.25em;
   margin-top: 8px;
   // display: inline-block;
 }
 
+.panel-body a {
+  color: gray;
+}
+
 .panel-body h4 {
   font-size: 1.5em;
-  font-weight: bold;
   margin-right: 0.4em;
 }
 
@@ -115,5 +130,17 @@ body {
 }
 
 .company-about p{
-  font-size: 1.2em
+  font-size: 1.2em;
+}
+
+.alert {
+  margin-bottom: 0;
+}
+
+.alert p {
+  margin: 0 0 1px;
+}
+
+.index-container {
+  margin-top: 2em;
 }

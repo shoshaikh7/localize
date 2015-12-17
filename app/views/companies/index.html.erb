@@ -1,5 +1,11 @@
-<h1>All Companies</h1>
-<div class="container">
+<div class="index-container container">
+  <div class="well text-center"><h1>Check out local businesses near you!</h1></div>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="">Tags go here!</div>
+    </div>
+    
+  </div>
   <% @companies.each do |company| %>
     <div class="company-thumbnail"><%= image_tag company.image.url(:thumb) %></div>
     <div class="company-name"><%= company.company_name %></div>

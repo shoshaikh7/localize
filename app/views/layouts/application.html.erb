@@ -10,8 +10,8 @@
 </head>
 <body>
   <%= render "/devise/menu/nav" %>
-  <% if notice %> <p class="notice"><%= notice %></p> <% end %>
-  <% if alert %> <p class="alert"><%= alert %></p> <% end %>
+  <% if notice %> <p class="notice alert alert-info"><%= notice %></p> <% end %>
+  <% if alert %> <p class="alert alert-warning"><%= alert %></p> <% end %>
 <%= yield %>
 
 </body>

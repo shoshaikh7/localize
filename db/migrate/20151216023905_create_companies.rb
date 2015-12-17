@@ -4,12 +4,14 @@ class CreateCompanies < ActiveRecord::Migration
       t.string :company_name
       t.string :tagline
       t.string :email
-      t.string :address1
-      t.string :address2
+      t.text :about
+      t.text :hours
+      t.string :street_address
+      t.string :street_address_2
+      t.string :city
+      t.string :state
       t.integer :zipcode
       t.integer :phone
-      t.text :about
-      t.string :hours
       t.string :facebook
       t.string :twitter
       t.string :google

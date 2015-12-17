@@ -1,11 +1,13 @@
-<h3>Edit your company's information by clicking on whatever you want to edit!</h3>
-
 <div class="container show-container">
+  <h3 class="well text-center">Edit your company's information by clicking on whatever you want to edit!   <%= link_to "Back to your company page", @company %></h3>
   <div class="row page-header show-header">
     <div class="company-image col-md-3"><%= image_tag @company.image.url(:large) %>
       <%= form_for @company, :html => { :multipart => true } do |f| %>
       <div class="field">
         <%= f.file_field :image %>
+      </div>
+      <div class="field">
+        <%= f.submit "Upload Image"%>
       </div>
       <% end %>
     </div>
@@ -16,9 +18,11 @@
     <div class="col-md-4">
       <div class="panel panel-default">
         <div class="panel-heading"><p>Address</p></div>
-        <div class="panel-body text-center">
-          <p><%= best_in_place @company, :address1 %></p>
-          <p><%= best_in_place @company, :address2 %></p>
+        <div class="panel-body">
+          <p><%= best_in_place @company, :street_address %></p>
+          <p><%= best_in_place @company, :street_address_2 %></p>
+          <p><%= best_in_place @company, :city %></p>
+          <p><%= best_in_place @company, :state %></p>
           <p><%= best_in_place @company, :zipcode %></p>
         </div>
       </div>
@@ -27,7 +31,7 @@
       <div class="panel panel-default">
         <div class="panel-heading"><p>Hours</p></div>
         <div class="panel-body text-center">
-          <p><%= best_in_place @company, :hours %></p>
+          <p><%= best_in_place @company, :hours, as: :textarea %></p>
         </div>
       </div>
     </div>
@@ -59,7 +63,7 @@
             </div>
 
             <div class="field">
-              <%= f.submit %>
+              <%= f.submit "Update Social" %>
             </div>
           <% end %>
         </div>
