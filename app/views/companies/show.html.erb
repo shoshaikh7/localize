@@ -8,7 +8,7 @@
     <div class="company-tagline col-md-6"><%= @company.tagline %></div>
     <% if @company.tags.any? %>
       <% @company.tags do |tag| %>
-        <%= link_to tag.name, tag_path(:tag => tag.name) %>
+        <div><%= link_to tag.name, tag_path(:tag => tag.name) %></div>
       <% end %>
     <% end %>
   </div>

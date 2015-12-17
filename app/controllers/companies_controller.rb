@@ -27,6 +27,12 @@ class CompaniesController < ApplicationController
   def edit
   end
 
+  def destroy
+    @company.destroy
+    flash.notice = "#{@company.company_name} Deleted!"
+    redirect_to new_company_path
+  end
+
   def update
     @company.update company_params
     respond_with @company
@@ -45,11 +51,11 @@ class CompaniesController < ApplicationController
   private
 
   def set_company
-    @company = Company.find(params[:id])
+    @company = Company.friendly.find params[:id]
   end
 
   def company_params
-    params.require(:company).permit( :company_name, :tagline, :street_address, :street_address_2, :city, :state, :zipcode, :phone, :email, :about, :hours, :facebook, :twitter, :google, :image, :user_id, :tag_list)
+    params.require(:company).permit( :company_name, :tagline, :street_address, :street_address_2, :city, :state, :zipcode, :phone, :email, :about, :hours, :facebook, :twitter, :google, :image, :user_id, :tag_list, :slug)
   end
 
   def check_company_presence

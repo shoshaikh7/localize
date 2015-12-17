@@ -1,5 +1,8 @@
 class Company < ActiveRecord::Base
   belongs_to :user
+  # Friendly ID
+  extend FriendlyId
+  friendly_id :company_name, use: :slugged
 
   # Acts as taggable
   acts_as_taggable_on :tags

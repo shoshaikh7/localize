@@ -34,20 +34,30 @@
   </div>
   <div class="row">
     <div class="col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-heading"><p>Address</p></div>
+      <div class="panel panel-default company-address">
+        <div class="panel-heading"><p class="panel-title">Address</p></div>
         <div class="panel-body">
-          <p><%= best_in_place @company, :street_address %></p>
-          <p><%= best_in_place @company, :street_address_2 %></p>
-          <p><%= best_in_place @company, :city %></p>
-          <p><%= best_in_place @company, :state %></p>
-          <p><%= best_in_place @company, :zipcode %></p>
+          <div class="row">
+            <h4 class="col-md-3">Address:</h4><p class="col-md-8"><%= best_in_place @company, :street_address %></p>
+          </div>
+          <div class="row">
+            <h4 class="col-md-3"></h4><p class="col-md-8"><%= best_in_place @company, :street_address_2 %></p>
+          </div>
+          <div class="row">
+            <h4 class="col-md-3">City:</h4><p class="col-md-8"><%= best_in_place @company, :city %></p>
+          </div>
+          <div class="row">
+            <h4 class="col-md-3">State:</h4><p class="col-md-8"><%= best_in_place @company, :state %></p>
+          </div>
+          <div class="row">
+            <h4 class="col-md-3">Zipcode:</h4><p class="col-md-8"><%= best_in_place @company, :zipcode %></p>
+          </div>
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <div class="panel panel-default">
-        <div class="panel-heading"><p>Hours</p></div>
+        <div class="panel-heading"><p class="panel-title">Hours</p></div>
         <div class="panel-body text-center">
           <p><%= best_in_place @company, :hours, as: :textarea %></p>
         </div>
@@ -55,7 +65,7 @@
     </div>
     <div class="col-md-4">
       <div class="panel panel-default">
-        <div class="panel-heading"><p>Contact</p></div>
+        <div class="panel-heading"><p class="panel-title">Contact</p></div>
         <div class="panel-body">
           <div class="row">
             <h4 class="col-md-4">Email:</h4><p class="col-md-4"><%= best_in_place @company, :email %></p>
@@ -91,5 +101,10 @@
   <div class="panel panel-default">
     <div class="panel-heading"><p>About Us</p></div>
     <div class="panel-body company-about"><p><%= best_in_place @company, :about, as: :textarea %></p></div>
+  </div>
+  <div>
+    <% if user_signed_in? %>
+      <%= link_to "Delete My Page", company_path, class: "btn btn-danger btn-lg delete-button", method: :delete, data: {confirm: "Do you really want to delete this company page?"} %>
+    <% end %>
   </div>
 </div>
