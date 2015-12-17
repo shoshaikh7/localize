@@ -199,6 +199,15 @@ body {
 .css4 { font-size: 1.6em; }
 
 .delete-button {
-  width: 100%;
-  margin-bottom: 2em;
+  width: 50%;
+  margin: 1em auto;
+}
+
+.custom-form {
+  padding: 2em;
+  margin-top: 2em;
+}
+
+.actions {
+  margin: 1.5em;
 }
