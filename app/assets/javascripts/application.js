@@ -13,5 +13,6 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require best_in_place
+//= require masonry/jquery.masonry
 //= require jquery_ujs
 //= require_tree .

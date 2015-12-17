@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require 'masonry/transitions'
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
@@ -143,4 +144,46 @@ body {
 
 .index-container {
   margin-top: 2em;
+}
+
+#companies {
+  margin: 0 auto;
+  width: 100%;
+}
+
+#companies .panel-body {
+  height: 2em;
+}
+
+#companies h2 {
+  font-size: 1.7em;
+}
+
+#companies a {
+  color: #333;
+  text-decoration: none;
+}
+
+#companies h4 {
+  font-size: 1.2em;
+  color: #777;
+}
+
+.tagline {
+  margin-top: 0.2em;
+}
+
+.box {
+  max-width: 240px;
+  margin: 10px;
+  border-radius: 7px;
+  // box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22)
+}
+
+.box img {
+  max-width: 100%;
+  height: auto;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
 }
