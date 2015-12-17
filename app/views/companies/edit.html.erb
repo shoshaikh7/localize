@@ -13,6 +13,24 @@
     </div>
     <div class="company-name col-md-8"><h1><%= best_in_place @company, :company_name %></h1></div>
     <div class="company-tagline col-md-6"><%= best_in_place @company, :tagline %></div>
+    <div class="row">
+      <div class="col-md-8">
+        <%= form_for @company, :html => { :multipart => true } do |f| %>
+          <div class="field col-md-6">
+            <%= f.label :tag_list, "(Seperated by commas)" %>
+            <%= f.text_field :tag_list %>
+          </div>
+          <div class="field col-md-3">
+            <%= f.submit "Update Tags" %>
+          </div>
+        <% end %>
+        <% if @company.tags.any? %>
+          <% @company.tags do |tag| %>
+            <%= link_to tag.name, tag_path(:tag => tag.name) %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
   </div>
   <div class="row">
     <div class="col-md-4">

@@ -6,6 +6,11 @@
     <div class="company-image col-md-3"><%= image_tag @company.image.url(:large) %></div>
     <div class="company-name col-md-8"><h1><%= @company.company_name %></h1></div>
     <div class="company-tagline col-md-6"><%= @company.tagline %></div>
+    <% if @company.tags.any? %>
+      <% @company.tags do |tag| %>
+        <%= link_to tag.name, tag_path(:tag => tag.name) %>
+      <% end %>
+    <% end %>
   </div>
   <div class="row">
     <div class="col-md-4">

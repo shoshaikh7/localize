@@ -5,7 +5,8 @@ class CompaniesController < ApplicationController
   respond_to :html, :json
 
   def index
-    @companies = Company.all
+    @companies = Company.all.order("created_at DESC")
+    @tags = Company.tag_counts_on(:tags)
     # @company = current_user.company
   end
 
@@ -31,6 +32,15 @@ class CompaniesController < ApplicationController
     respond_with @company
   end
 
+  def tagged
+    # Tag_list returns an array of tags
+    if params[:tag].present?
+      @companies = Company.tagged_with(params[:tag])
+    else
+      @companies = Company.all.order("created_at DESC")
+    end
+  end
+
 
   private
 
@@ -39,7 +49,7 @@ class CompaniesController < ApplicationController
   end
 
   def company_params
-    params.require(:company).permit( :company_name, :tagline, :street_address, :street_address_2, :city, :state, :zipcode, :phone, :email, :about, :hours, :facebook, :twitter, :google, :image, :user_id)
+    params.require(:company).permit( :company_name, :tagline, :street_address, :street_address_2, :city, :state, :zipcode, :phone, :email, :about, :hours, :facebook, :twitter, :google, :image, :user_id, :tag_list)
   end
 
   def check_company_presence

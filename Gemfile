@@ -35,6 +35,8 @@ gem 'friendly_id', '~> 5.1'
 gem 'best_in_place', '~> 3.1'
 # Masonry
 gem 'masonry-rails', '~> 0.2.4'
+# Taggable
+gem 'acts-as-taggable-on', '~> 3.5'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
