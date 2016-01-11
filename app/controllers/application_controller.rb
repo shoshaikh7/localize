@@ -9,7 +9,10 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update){ |u| u.permit(:first_name, :last_name, :phone, :email, :current_password) }
   end
   def after_sign_in_path_for(resource)
-  	company_path(resource)
+     if current_user.company == nil
+  	   new_company_path(resource)
+     else
+       company_path(resource)
+     end
   end
-
 end

@@ -20,7 +20,11 @@
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Edit My Account", edit_user_registration_path %></li>
           <% if current_page?(companies_path) %>
-            <li><%= link_to "Show My Company", @company %></li>
+            <% if current_user.company == nil %>
+              <li><%= link_to "Create My Company", new_company_path %></li>
+            <% else %>
+              <li><%= link_to "Show My Company", @company %></li>
+            <% end %>
           <% end %>
           <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
         </ul>

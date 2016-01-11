@@ -18,7 +18,5 @@
       </div>
     <% end %>
   </div>
-  <% if current_user.company == nil %>
-    <%= button_tag "Create Your Business Page", :type => 'button', :class => "btn btn-lg btn-info", :onclick => "location.href = '#{new_company_path}'" %>
-  <% end %>
+
 </div>
