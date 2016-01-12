@@ -1,99 +1,87 @@
-<div class="container">
+<div class="custom-form">
   <%= form_for @company, :html => { :multipart => true } do |f| %>
-    <% if @company.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize @post.errors.count, "error" %> prohibited this post from being saved:</h2>
-        <ul>
-        <% @post.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
+  <% if @company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize @post.errors.count, "error" %> prohibited this post from being saved:</h2>
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="col-md-6">
+      <div class="field input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-users"></i></span>
+        <%= f.text_field :company_name, autofocus: true, class:"col-md-6 form-control", placeholder:"Company Name" %>
       </div>
-    <% end %>
-    <div class="custom-form">
-      <div class="field">
-        <%= f.label :company_name %><br />
-        <%= f.text_field :company_name, autofocus: true %>
+      <div class="field input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-ellipsis-h"></i></span>
+        <%= f.text_field :tagline, class:"col-md-6 form-control", placeholder:"Company Tagline" %>
       </div>
-
-      <div class="field">
-        <%= f.label :image %><br />
-        <%= f.file_field :image %>
+      <div class="field input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-picture-o"></i></span>
+        <%= f.file_field :image, class:"col-md-6 form-control", placeholder:"Add Image" %>
       </div>
-
-      <div class="field">
-        <%= f.label :tag_list, "Tags: (Seperated by commas)" %><br />
-        <%= f.text_field :tag_list %>
+      <div class="field input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-hashtag"></i></span>
+        <%= f.text_field :tag_list, class:"col-md-6 form-control", placeholder:"Add Tags For Your Company" %>
       </div>
-
-      <div class="field">
-        <%= f.label :tagline %><br />
-        <%= f.text_field :tagline %>
+      <div class="field input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-at"></i></span>
+        <%= f.email_field :email, class:"col-md-6 form-control", placeholder:"Company Email" %>
       </div>
-
-      <div class="field">
-        <%= f.label :about %><br />
-        <%= f.text_area :about %>
+      <div class="field input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-map-signs"></i></span>
+        <%= f.text_field :street_address, class:"col-md-6 form-control", placeholder:"Street Address 1" %>
       </div>
-
-      <div class="field">
-        <%= f.label :hours %><br />
-        <%= f.text_area :hours %>
+      <div class="field input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-map-signs"></i></span>
+        <%= f.text_field :street_address_2  , class:"col-md-6 form-control", placeholder:"Street Address 2" %>
       </div>
-
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email %>
+    </div>
+    <div class="col-md-6">
+      <div class="field input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-map"></i></span>
+        <%= f.text_field :city, class:"col-md-6 form-control", placeholder:"City" %>
       </div>
-
-      <div class="field">
-        <%= f.label :street_address %><br />
-        <%= f.text_field :street_address %>
+      <div class="field input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-map-o"></i></span>
+        <%= f.text_field :state, class:"col-md-6 form-control", placeholder:"State" %>
       </div>
-
-      <div class="field">
-        <%= f.label :street_address_2%><br />
-        <%= f.text_field :street_address_2%>
+      <div class="field input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-map-marker"></i></span>
+        <%= f.telephone_field :zipcode, class:"col-md-6 form-control", placeholder:"Zipcode" %>
       </div>
-
-      <div class="field">
-        <%= f.label :city%><br />
-        <%= f.text_field :city%>
+      <div class="field input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-phone"></i></span>
+        <%= f.telephone_field :phone, class:"col-md-6 form-control", placeholder:"Phone" %>
       </div>
-
-      <div class="field">
-        <%= f.label :state%><br />
-        <%= f.text_field :state%>
+      <div class="field input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-facebook"></i></span>
+        <%= f.url_field :facebook, class:"col-md-6 form-control", placeholder:"Facebook" %>
       </div>
-
-      <div class="field">
-        <%= f.label :zipcode %><br />
-        <%= f.telephone_field :zipcode %>
+      <div class="field input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-twitter"></i></span>
+        <%= f.url_field :twitter, class:"col-md-6 form-control", placeholder:"Twitter" %>
       </div>
-
-      <div class="field">
-        <%= f.label :phone %><br />
-        <%= f.telephone_field :phone %>
+      <div class="field input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-google-plus"></i></span>
+        <%= f.url_field :google, class:"col-md-6 form-control", placeholder:"Google+" %>
       </div>
-
-      <div class="field">
-        <%= f.label :facebook %><br />
-        <%= f.url_field :facebook %>
+    </div>
+    <div class="col-md-12">
+      <div class="field input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-align-left"></i></span>
+        <%= f.text_area :about, class:"col-md-6 form-control", placeholder:"A little about your company..." %>
       </div>
-
-      <div class="field">
-        <%= f.label :twitter %><br />
-        <%= f.url_field :twitter %>
+      <div class="field input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-clock-o"></i></span>
+        <%= f.text_area :hours, class:"col-md-6 form-control", placeholder:"Company Hours" %>
       </div>
-
-      <div class="field">
-        <%= f.label :google, "Google+" %><br />
-        <%= f.url_field :google %>
-      </div>
-
-      <div class="field">
-        <%= f.submit %>
-      </div>
+    </div>
+    <div class="actions col-md-offset-3">
+      <%= f.submit "Create My Company", class:"btn btn-lg btn-default col-md-8" %>
     </div>
   <% end %>
 </div>

@@ -18,19 +18,19 @@
         <div class="panel-heading"><p class="panel-title">Address</p></div>
         <div class="panel-body">
           <div class="row">
-            <h4 class="col-md-3">Address:</h4><p class="col-md-8"><%= @company.street_address %></p>
+            <h5 class="col-md-3">Address:</h5><h5 class="col-md-8"><%= @company.street_address %></h5>
           </div>
           <div class="row">
-            <h4 class="col-md-3"></h4><p class="col-md-8"><%= @company.street_address_2 %></p>
+            <h5 class="col-md-3"></h5><h5 class="col-md-8"><%= @company.street_address_2 %></h5>
           </div>
           <div class="row">
-            <h4 class="col-md-3">City:</h4><p class="col-md-8"><%= @company.city %></p>
+            <h5 class="col-md-3">City:</h5><h5 class="col-md-8"><%= @company.city %></h5>
           </div>
           <div class="row">
-            <h4 class="col-md-3">State:</h4><p class="col-md-8"><%= @company.state %></p>
+            <h5 class="col-md-3">State:</h5><h5 class="col-md-8"><%= @company.state %></h5>
           </div>
           <div class="row">
-            <h4 class="col-md-3">Zipcode:</h4><p class="col-md-8"><%= @company.zipcode %></p>
+            <h5 class="col-md-3">Zipcode:</h5><h5 class="col-md-8"><%= @company.zipcode %></h5>
           </div>
         </div>
       </div>
@@ -48,12 +48,13 @@
         <div class="panel-heading"><p class="panel-title">Contact</p></div>
         <div class="panel-body">
           <div class="row">
-            <h4 class="col-md-4">Email:</h4><p class="col-md-4"><%= @company.email %></p>
+            <h5 class="col-md-4">Email:</h5><h5 class="col-md-4"><%= @company.email %></h5>
           </div>
           <div class="row">
-            <h4 class="col-md-4">Phone:</h4><p class="col-md-4"><%= @company.phone %></p>
+            <h5 class="col-md-4">Phone:</h5><h5 class="col-md-4"><%= @company.phone %></h5>
           </div>
           <hr>
+          <br>
           <a href="<%= @company.facebook %>" id="facebook" class="col-md-3 col-md-offset-2"><i class="fa fa-3x fa-facebook-square"></i></a>
           <a href="<%= @company.twitter %>" id="twitter" class="col-md-3"><i class="fa fa-3x fa-twitter-square"></i></a>
           <a href="<%= @company.google %>" id="google" class="col-md-3"><i class="fa fa-3x fa-google-plus-square"></i></a>
