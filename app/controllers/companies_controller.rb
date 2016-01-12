@@ -55,7 +55,7 @@ class CompaniesController < ApplicationController
   end
 
   def company_params
-    params.require(:company).permit( :company_name, :tagline, :street_address, :street_address_2, :city, :state, :zipcode, :phone, :email, :about, :hours, :facebook, :twitter, :google, :image, :user_id, :tag_list, :slug)
+    params.require(:company).permit( :company_name, :tagline, :street_address, :street_address_2, :city, :state, :zipcode, :phone, :email, :about, :mon_open, :mon_close, :tues_open, :tues_close, :wed_open, :wed_close, :thurs_open, :thurs_close, :fri_open, :fri_close, :sat_open, :sat_close, :sun_open, :sun_close, :facebook, :twitter, :google, :image, :user_id, :tag_list, :slug)
   end
 
   def check_company_presence

@@ -106,7 +106,7 @@ body {
 }
 
 .panel-body {
-  height: 13em;
+  height: 14em;
 }
 
 .panel-body p {
@@ -216,6 +216,13 @@ body {
   color: #fff;
   margin: 1em 0;
 }
-.actions {
-  // margin: 1.5em;
+
+.form-days .form-hours{
+  display: inline-block;
+}
+
+/************************** Table **************************/
+
+.table h6 {
+  margin: 0;
 }

@@ -38,8 +38,53 @@
     <div class="col-md-4">
       <div class="panel panel-default">
         <div class="panel-heading"><p class="panel-title">Hours</p></div>
-        <div class="panel-body text-center">
-          <p><%= @company.hours %></p>
+        <div class="panel-body">
+          <table class="table table-hover table-condensed table-responsive">
+            <th>
+              <h6><strong>Day</strong></h6>
+            </th>
+            <th>
+              <h6><strong>Opening</strong></h6>
+            </th>
+            <th>
+              <h6><strong>Closing</strong></h6>
+            </th>
+            <tr>
+              <td><h6>Monday</h6></td>
+              <td><h6><%= @company.mon_open %></h6></td>
+              <td><h6><%= @company.mon_close %></h6></td>
+            </tr>
+            <tr>
+              <td><h6>Tuesday</h6></td>
+              <td><h6><%= @company.tues_open %></h6></td>
+              <td><h6><%= @company.tues_close %></h6></td>
+            </tr>
+            <tr>
+              <td><h6>Wednesday</h6></td>
+              <td><h6><%= @company.wed_open %></h6></td>
+              <td><h6><%= @company.wed_close %></h6></td>
+            </tr>
+            <tr>
+              <td><h6>Thursday</h6></td>
+              <td><h6><%= @company.thurs_open %></h6></td>
+              <td><h6><%= @company.thurs_close %></h6></td>
+            </tr>
+            <tr>
+              <td><h6>Friday</h6></td>
+              <td><h6><%= @company.fri_open %></h6></td>
+              <td><h6><%= @company.fri_close %></h6></td>
+            </tr>
+            <tr>
+              <td><h6>Saturday</h6></td>
+               <td><h6><%= @company.sat_open %></h6></td>
+               <td><h6><%= @company.sat_close %></h6></td>
+            </tr>
+            <tr>
+              <td><h6>Sunday</h6></td>
+              <td><h6><%= @company.sun_open %></h6></td>
+              <td><h6><%= @company.sun_close %></h6></td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>

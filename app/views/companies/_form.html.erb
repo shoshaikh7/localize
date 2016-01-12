@@ -75,9 +75,56 @@
         <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-align-left"></i></span>
         <%= f.text_area :about, class:"col-md-6 form-control", placeholder:"A little about your company..." %>
       </div>
-      <div class="field input-group input-group-lg">
-        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-clock-o"></i></span>
-        <%= f.text_area :hours, class:"col-md-6 form-control", placeholder:"Company Hours" %>
+    </div>
+    <div class="form-days text-center">
+      <div class="form-hours col-md-3">
+        <div class="field input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-clock-o"></i></span>
+          <div><%= f.text_field :mon_open, class:"form-control", placeholder:"Monday Open" %></div>
+          <div><%= f.text_field :mon_close, class:"form-control", placeholder:"Monday Close" %></div>
+        </div>
+      </div>
+      <div class="form-hours col-md-3">
+        <div class="field input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-clock-o"></i></span>
+          <div><%= f.text_field :tues_open, class:"form-control", placeholder:"Tuesday Open" %></div>
+          <div><%= f.text_field :tues_close, class:"form-control", placeholder:"Tuesday Close" %></div>
+        </div>
+      </div>
+      <div class="form-hours col-md-3">
+        <div class="field input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-clock-o"></i></span>
+          <div><%= f.text_field :wed_open, class:"form-control", placeholder:"Wednnesday Open" %></div>
+          <div><%= f.text_field :wed_close, class:"form-control", placeholder:"Wednnesday Close" %></div>
+        </div>
+      </div>
+      <div class="form-hours col-md-3">
+        <div class="field input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-clock-o"></i></span>
+          <div><%= f.text_field :thurs_open, class:"form-control", placeholder:"Thursday Open" %></div>
+          <div><%= f.text_field :thurs_close, class:"form-control", placeholder:"Thursday Close" %></div>
+        </div>
+      </div>
+      <div class="form-hours col-md-3 col-md-offset-1">
+        <div class="field input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-clock-o"></i></span>
+          <div><%= f.text_field :fri_open, class:"form-control", placeholder:"Friday Open" %></div>
+          <div><%= f.text_field :fri_close, class:"form-control", placeholder:"Friday Close" %></div>
+        </div>
+      </div>
+      <div class="form-hours col-md-3">
+        <div class="field input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-clock-o"></i></span>
+          <div><%= f.text_field :sat_open, class:"form-control", placeholder:"Saturday Open" %></div>
+          <div><%= f.text_field :sat_close, class:"form-control", placeholder:"Saturday Close" %></div>
+        </div>
+      </div>
+      <div class="form-hours col-md-3">
+        <div class="field input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-clock-o"></i></span>
+          <div><%= f.text_field :sun_open, class:"form-control", placeholder:"Sunday Open" %></div>
+          <div><%= f.text_field :sun_close, class:"form-control", placeholder:"Sunday Close" %></div>
+        </div>
       </div>
     </div>
     <div class="actions col-md-offset-3">
