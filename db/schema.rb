@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20151217144850) do
     t.string   "city"
     t.string   "state"
     t.integer  "zipcode"
-    t.integer  "phone"
+    t.string   "phone"
     t.string   "facebook"
     t.string   "twitter"
     t.string   "google"
