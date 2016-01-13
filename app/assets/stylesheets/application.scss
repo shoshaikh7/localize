@@ -26,8 +26,9 @@ body {
 .main-header {
   background-image: image-url('city.jpeg');
   background-size: cover;
-  height: 45em;
+  height: 100vh;
   color: white;
+  margin-bottom: 0;
 }
 
 .main-header h1{

@@ -1,5 +1,5 @@
 <div class="jumbotron main-header text-center">
-  <h1>Welcome to Localize<% if user_signed_in? %>
+  <h1>Welcome to Localized<% if user_signed_in? %>
                             <%= current_user.first_name.capitalize %>
                           <% end %>!
   </h1>
@@ -10,7 +10,7 @@
       <%= button_tag "Create Your Business Page", :type => 'button', :class => "btn btn-lg btn-success", :onclick => "location.href = '#{new_company_path}'" %>
     <% end %>
   <% else %>
-    <%= button_tag "Check Out Localize", :type => 'button', :class => "btn btn-lg btn-info", :onclick => "location.href = '#{companies_path}'" %>
+    <%= button_tag "Check Out Localized", :type => 'button', :class => "btn btn-lg btn-info", :onclick => "location.href = '#{companies_path}'" %>
   <% end %>!
 </div>
 <div class="container">
