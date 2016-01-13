@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
      if current_user.company == nil
   	   new_company_path(resource)
      else
-       company_path(resource)
+       companies_path(resource)
      end
   end
 end
