@@ -1,13 +1,11 @@
 class CompaniesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
   before_action :set_company, only: [:destroy, :show, :update, :edit]
-  before_action :check_company_presence, only: [:new, :create]
   respond_to :html, :json
 
   def index
     @companies = Company.all.order("created_at DESC")
     @tags = Company.tag_counts_on(:tags)
-    # @company = current_user.company
   end
 
   def show
@@ -57,9 +55,4 @@ class CompaniesController < ApplicationController
   def company_params
     params.require(:company).permit( :company_name, :tagline, :street_address, :street_address_2, :city, :state, :zipcode, :phone, :email, :about, :mon_open, :mon_close, :tues_open, :tues_close, :wed_open, :wed_close, :thurs_open, :thurs_close, :fri_open, :fri_close, :sat_open, :sat_close, :sun_open, :sun_close, :facebook, :twitter, :google, :image, :user_id, :tag_list, :slug)
   end
-
-  def check_company_presence
-    # redirect_to company_path if current_user.company.exists?
-  end
-
 end
