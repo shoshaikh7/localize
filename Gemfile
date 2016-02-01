@@ -28,9 +28,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 # Pry
 gem 'pry', '~> 0.10.3'
 # Paperclip
-gem 'paperclip', '~> 4.3', '>= 4.3.2'
-# AWS
-gem 'aws-sdk', '~> 2.2', '>= 2.2.14'
+gem 'paperclip'
 # Friendly ID
 gem 'friendly_id', '~> 5.1'
 # Best in place
