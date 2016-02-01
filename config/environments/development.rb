@@ -41,4 +41,14 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # AWS Web Services S3
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => localized,
+      :s3_credentials => "#{Rails.root}/config/aws.yml"
+    }
+  }
+  
 end
