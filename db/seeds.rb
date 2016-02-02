@@ -52,7 +52,6 @@ Company.create!([
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
     google: "https://plus.google.com/",
-    # image: File.new("app/assets/images/Company_Logo_640/gadgets_4912_3264.jpeg"),
     slug: "officially-geeked",
     user_id: 1111
   },
@@ -85,7 +84,6 @@ Company.create!([
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
     google: "https://plus.google.com/",
-    # image: File.new("app/assets/images/Company_Logo_640/google_640.jpg"),
     slug: "google",
     user_id: 2222
   },
@@ -118,7 +116,6 @@ Company.create!([
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
     google: "https://plus.google.com/",
-    # image: File.new("app/assets/images/Company_Logo_640/microsoft_640.jpg"),
     slug: "microsoft",
     user_id: 3333
   },
@@ -151,7 +148,6 @@ Company.create!([
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
     google: "https://plus.google.com/",
-    # image: File.new("app/assets/images/Company_Logo_640/apple_640.jpg"),
     slug: "apple",
     user_id: 4444
   },
@@ -184,7 +180,6 @@ Company.create!([
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
     google: "https://plus.google.com/",
-    # image: File.new("app/assets/images/Company_Logo_640/amazon_640.jpg"),
     slug: "amazon",
     user_id: 5555
   },
@@ -217,7 +212,6 @@ Company.create!([
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
     google: "https://plus.google.com/",
-    # image: File.new("app/assets/images/Company_Logo_640/twitter_640.jpg"),
     slug: "twitter",
     user_id: 6666
   },
@@ -250,7 +244,6 @@ Company.create!([
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
     google: "https://plus.google.com/",
-    # image: File.new("app/assets/images/Company_Logo_640/airbnb_640.jpg"),
     slug: "airbnb",
     user_id: 7777
   },
@@ -283,7 +276,6 @@ Company.create!([
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
     google: "https://plus.google.com/",
-    # image: File.new("app/assets/images/Company_Logo_640/dropbox_640.png"),
     slug: "dropbox",
     user_id: 8888
   },
@@ -316,7 +308,6 @@ Company.create!([
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
     google: "https://plus.google.com/",
-    # image: File.new("app/assets/images/Company_Logo_640/groupon_640.jpg"),
     slug: "groupon",
     user_id: 9999
   },
@@ -349,7 +340,6 @@ Company.create!([
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
     google: "https://plus.google.com/",
-    # image: File.new("app/assets/images/Company_Logo_640/spotify_640.jpg"),
     slug: "spotify",
     user_id: 10000
   },
@@ -382,7 +372,6 @@ Company.create!([
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
     google: "https://plus.google.com/",
-    # image: File.new("app/assets/images/Company_Logo_640/pinterest_640.jpg"),
     slug: "pinterest",
     user_id: 11111
   },
@@ -415,7 +404,6 @@ Company.create!([
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
     google: "https://plus.google.com/",
-    # image: File.new("app/assets/images/Company_Logo_640/instagram_640.jpg"),
     slug: "instagram",
     user_id: 12222
   },
@@ -448,7 +436,6 @@ Company.create!([
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
     google: "https://plus.google.com/",
-    # image: File.new("app/assets/images/Company_Logo_640/tumblr_640.jpg"),
     slug: "tumblr",
     user_id: 13333
   },
