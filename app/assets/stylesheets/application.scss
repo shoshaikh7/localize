@@ -182,8 +182,10 @@ body {
 }
 
 .box img {
+  min-width: 235px;
   max-width: 100%;
   height: auto;
+  min-height: 175px;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
 }
