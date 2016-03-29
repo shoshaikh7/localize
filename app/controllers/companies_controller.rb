@@ -18,8 +18,12 @@ class CompaniesController < ApplicationController
   def create
     @company = Company.new company_params
     @company.user = User.find current_user.id
-    @company.save
-    redirect_to @company
+    if @company.save
+      flash[:success] = "Welcome to the Localized!"
+      redirect_to @company
+    else
+      render 'new'
+    end
   end
 
   def edit

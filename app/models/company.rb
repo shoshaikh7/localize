@@ -13,4 +13,5 @@ class Company < ActiveRecord::Base
 
   # Validates Phone Number
   validates :phone, :phone_number => {:ten_digits => true, :message => "Phone number must be 10 digits in length."}
+  validates :company_name, :email, :presence => true
 end
